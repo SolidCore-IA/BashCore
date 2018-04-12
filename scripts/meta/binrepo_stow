@@ -1,0 +1,14 @@
+#!/bin/bash
+#
+# binrepo_stow.sh
+#
+# Runs stow @ ~/.local/bin/binrepo/ on all folders except 0_templates. 
+# Creates symlinks @ ~/.local/bin/ for bash script running
+#
+# V 1.0
+#
+echo "Creating script symlinks @ ~/.local/bin"
+cd /home/$USER/.local/bin/binrepo/
+stow misc/ meta/ network/ posh/ rsync/ sysops/ test/ vbox/
+rm -rdf /home/$USER/.local/bin/.*.swp
+notify-send "Script symlinks built"

@@ -1,0 +1,25 @@
+#!/bin/bash
+#
+# mannyb v1.0
+# runs quick network reset and test basics/ must run as root
+echo "start net reset log" > ~/netreset_log.txt
+uptime >> ~/netreset_log.txt
+echo "public ip" >> ~/netreset_log.txt
+public-ip >> ~/netreset_log.txt
+echo "start local ip" >> ~/netreset_log.txt
+ifconfig|grep 'inet addr:' >> ~/netreset_log.txt
+ifconfig eth0 down
+sleep 10
+ifconfig eth0 up
+sleep 10
+/etc/init.d/networking stop
+sleep 10
+/etc/init.d/networking start
+sleep 30
+echo "end local ip" >> ~/netreset_log.txt
+ifconfig|grep 'inet addr:' >> ~/netreset_log.txt
+ping -c 4 8.8.8.8 >> ~/netreset_log.txt
+speedtest >> ~/netreset_log.txt
+echo "end of log" >> ~/netreset_log.txt
+#below moves log file from /root to ~/
+mv /root/netreset_log.txt /home/manny/

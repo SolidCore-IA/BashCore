@@ -1,0 +1,51 @@
+#!/bin/bash
+#
+# backup config script
+# MannyB
+# v1.1
+#
+echo "??DID WE RUN AS SUDO?? ctrl+C to stop now"
+sleep 10
+echo "starting config backups"
+echo ............
+# urxvt
+echo "urxvt xresources"
+cp /home/manny/.Xresources /media/sysdrive/dot_config/urxvt_Xresources.txt
+# bashrc
+echo bashrc
+cp /home/manny/.bashrc /media/sysdrive/dot_config/bashrc.txt
+# xsessionrc
+echo xsessionrc
+cp /home/manny/.xsessionrc /media/sysdrive/dot_config/xessionrc.txt
+# vimrc
+echo vimrc
+cp /home/manny/.vimrc /media/sysdrive/dot_config/vimdotfolder/vimrc.txt
+# irssi
+echo irssi
+cp /home/manny/.irssi/config /media/sysdrive/dot_config/irssi_config.txt
+# pulseway
+echo pulseway
+cp /etc/pulseway/config.xml /media/sysdrive/dot_config/pulseway_config.xml
+# apt sources lists
+echo "apt sources"
+cp /etc/apt/sources.list /media/sysdrive/dot_config/aptsource/
+cp -r /etc/apt/sources.list.d /media/sysdrive/dot_config/aptsource/
+# dunstrc
+echo "dunstrc"
+cp /home/manny/.config/dunst/dunstrc /media/sysdrive/dot_config/dunstrc.txt
+#i3stuff
+echo "i3stuff"
+cp -r /home/manny/.i3 /media/sysdrive/dot_config/i3stuff
+#
+#ROOT USER DOT.CONFIGS
+#
+# bashrc
+echo "root bashrc"
+cp /root/.bashrc /media/sysdrive/dot_config/root.bashrc.txt
+# urxvt
+echo "root urxvt xresorces"
+cp /root/.Xresources /media/sysdrive/dot_config/root.urxvt_Xresources.txt
+# ddclient
+echo "ddclient"
+cp /etc/ddclient.conf /media/sysdrive/dot_config/
+#

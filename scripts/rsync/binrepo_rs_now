@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# binrepo_rs_now.sh
+#
+# mannyb binrepo backup to /sysdrive/ backups
+# V 1.0
+#
+echo "Script repo is now syncing"
+rsync -auh --progress /home/manny/.local/bin/binrepo/ /media/sysdrive/kraftwork/script_repo_kraftwork/
+rm -drf /media/sysdrive/kraftwork/script_repo_kraftwork/.*.swp
+notify-send "Script repo sync is done"

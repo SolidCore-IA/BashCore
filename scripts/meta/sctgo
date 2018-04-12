@@ -1,0 +1,18 @@
+#!/bin/bash 
+#
+##Opens ManuelB sct Browser
+/opt/google/chrome/google-chrome "--profile-directory=Profile 1"&
+#
+##drive@sctnet local
+#pcmanfm -n drive@sctnet
+#
+##Teamviewer remote
+#teamviewer
+#
+##Dialpad softphone
+#/opt/google/chrome/google-chrome "--profile-directory=Profile 1" --app-id=hfbikaejeiilikhlldnfbecpkbicmndn
+#
+##SCT calander
+#
+##SCT evernote info
+##/opt/google/chrome/google-chrome "--profile-directory=Profile 1" -app="https://www.evernote.com/Home.action#n=18569cfc-4eb1-4a91-ae98-6e97304c31f7&b=5eb1c659-99c0-4126-b8a1-edda4feb558a&ses=4&sh=1&sds=5&"

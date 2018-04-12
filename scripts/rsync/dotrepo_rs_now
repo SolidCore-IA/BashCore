@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# dotrepo_rs_now.sh
+#
+# mannyb dotrepo backup to /sysdrive/ backups
+# V 1.0
+#
+echo "dotrepo is now syncing"
+rsync -auh --progress /home/manny/.dotrepo/ /media/sysdrive/kraftwork/dotrepo_kraftwork/
+notify-send "dotrepo sync is done"
